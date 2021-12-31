@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        setTimeout() 사용법 :
+        var 참조변수 = setTimeout(function(){코드}, 시간간격(msc));
+        var tim = setTimeout(function(){i++;}, 5000);
+        var tim = setTimeout("i++", 5000);
+        clearTimeout(tim);
+        */
+        var addNum =0;
+        var auto = setTimeout(function(){
+            addNum++;
+            console.log(addNum);
+        }, 5000)
+    </script>
+</body>
+</html>

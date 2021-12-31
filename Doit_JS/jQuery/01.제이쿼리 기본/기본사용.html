@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery 다운로드 방식으로 연동하기 -->
+    <!-- 참고로 3.x.x 버전: ajax를 지원, 2.x.x 버전: IE 6~8 지원안함, 1.x.x:구형브라우저, 공공기관 사이트 작업에 추천(jquery-1.12.4) -->
+    <script src="/jquery_3.6.0/jquery.min.js"></script>
+    <script src="/jquery_3.6.0/jquery-migrate.min.js"></script>
+    <!-- jquery 네트워크 방식으로 연동하기 (migrate 1.4.1버전 사용 )-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js"></script> -->
+    <script>
+        /* 
+        제이쿼리 선택자 사용 바른 예 
+        방법1)
+        - 제이쿼리 실행: <script src="/jquery_3.6.0/jquery.min.js"/>
+        - 새로운 스크립트안에 선택자 담은 준비함수 실행:
+            $(document).ready(function(){
+                $("#txt").css("color","red");
+            });
+    
+        방법2)
+        - 제이쿼리 실행:<script src="/jquery_3.6.0/jquery.min.js"/>
+        - 새로운 스크립트안에 함수 실행:
+            $function(){
+                $("#txt").css("color","red");
+            }
+        
+        //제이쿼리 선택자로 스타일이나 속성 적용 기본형
+        1) 스타일 적용
+            $("CSS선택자").css("스타일 속성명", "값");
+        2) 속성 적용
+            $("CSS 선택자").attr("속성명", "값");
+        */
+        $(function(){
+            $("#title").css("color", "red")
+        })    
+    </script>
+</head>
+<body>
+    <h1 id="title">제목</h1>
+</body>
+</html>

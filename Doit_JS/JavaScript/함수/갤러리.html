@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cols = ['red','blue', 'pink', 'white', 'aqua']
+        var num =0;
+        function gallery(direct){
+            if(direct){ //1 == true
+                if(num==cols.length-1){return;}
+                num++;
+            }else {
+                if(num==0){return;}
+                num--;
+            }
+            var d = document.getElementById("img1");
+            d.style.backgroundColor=cols[num];
+            var d = document.getElementById("txt");
+            var imgTag = document.getElementById("photo")
+            imgTag.setAttribute("src", "images/pic_"+num+".jpg");
+        }
+
+    </script>
+    <h1>갤러리</h1>
+    <div id="img1" style="border:solid 1px black;">
+        <h2 id="txt">0</h2>
+        <p><img src="images/pic_1.jpg" id="photo" alt=""></p>
+    </div>
+    <button onclick="gallery(0);">이전</button>
+    <button onclick="gallery(1);">다음</button>
+</body>
+</html>

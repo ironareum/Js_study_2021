@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date(); //현재날짜
+        var nowMonth = today.getMonth(), //월 정보만 가져옴 (1월 = 0부터 시작??)
+        nowDate = today.getDate(), //일 정보만 가져옴
+        nowDay = today.getDay(); //요일 정보만 가져옴
+
+        document.write("<h1>오늘 날짜 정보</h1><br>");
+        document.write("현재 월 : " + (nowMonth+1)+"<br>")
+        document.write("현재 일 : " + nowDate+"<br>")
+        document.write("현재 요일 : " + nowDay+"<br>")
+
+        var worldCup = new Date("2002/4/30") //특정날짜 방법1
+        //var worldCup = new Date(2002,4,30) //특정날짜 방법2
+        var w_Month = worldCup.getMonth(),
+        w_Date = worldCup.getDate(),
+        w_Day = worldCup.getDay();
+
+        document.write("<h1>월드컵 날짜 정보</h1><br>");
+        document.write("2002년 월드컵 몇 월:"+ (w_Month+1)+"<br>");
+        document.write("2002년 월드컵 몇 일:"+ w_Date+"<br>");
+        document.write("2002년 월드컵 무슨 요일:"+ w_Day+"<br>");
+
+    </script>
+</body>
+</html>

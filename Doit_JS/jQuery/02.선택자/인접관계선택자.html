@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery_3.6.0/jquery.min.js"></script>
+    <script src="/jquery_3.6.0/jquery-migrate.min.js"></script>
+    <script>
+        /* 
+        인접 관계 선택자:
+        직접 선택자로 요소를 먼저 선택하고 그다음 선택한 요소와 가까이에 있는 (이전/다음)요소를 선택할때 사용
+        */
+       $(function(){
+        
+        //    $("h2").next().css("color", "green");
+        //    $("h2").prev().css("border", "1px solid #f00");
+
+        //부모요소 선택자 
+        //$("#list_1").parent().css("border", "2px solid #f00");
+
+        //하위요소 선택자 (#wrap이 포함하는 모든 h1)
+        //$("#wrap h1").css("background-color", "yellow")
+
+        //자식요소 선택자 
+        // $("#wrap >h1").css({"border": "2px dashed #f00", "background-color":"green"});
+        // $("#wrap > section").children().css("background-color", "red");
+        // $("#wrap > section").children("p").css("border", "2px solid blue");
+
+        //형(이전)/동생(다음) 선택자
+        var style_1 = {
+            "background-color":"#0ff",
+            "border":"2px solid #f00"
+        }
+        var style_2 = {
+            "background-color":"#ff0",
+            "border":"2px dashed #f00"
+        }
+        // $(".txt").prev().css(style_1);
+        // $(".txt +p").css(style_2);
+        // $(".txt").next().next().css(style_2);
+
+        //전체 형(이전)/ 동생(다음) 요소 선택자 
+
+        //범위제한 전체 형(이전)/ 동생(다음) 요소 선택자
+        // $(".txt3").prevUntil(".title").css(style_1)
+        // $(".txt3").nextUntil(".txt6").css(style_2)
+
+        //상위요소 선택자 
+        $(".txt1").parents().css(style_1)
+        $(".txt2").parents("div").css(style_2)
+       })
+
+
+    </script>
+</head>
+<body>
+   <!-- <div class="wrap">
+         <div id="inner_wrap">
+            <h1>제목1</h1>
+            <h2>제목2</h2>
+            <p>내용1</p>
+        </div> 
+    </div> -->
+    <!-- //부모요소 선택자  -->
+    <!-- <h1>인접 관계 선택자</h1>
+    <ul id="wrap">
+        <li>리스트 1
+            <ul>
+                <li id="list_1">리스트1-1</li>
+                <li>리스트1-2</li>
+            </ul>
+        </li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>    -->
+
+    <!-- 하위요소 선택자 -->
+    <!-- <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <section>
+            <h1>하위 요소 선택자</h1>
+            <p>내용2</p>
+        </section>
+    </div> -->
+
+    <!-- 자식요소 선택자  -->
+    <!-- <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <section>
+            <h1>자식요소 선택자</h1>
+            <p>내용2</p>
+        </section>
+    </div> -->
+
+    <!-- 형(이전)/동생(다음) 선택자 -->
+    <!-- <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="txt">내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div> -->
+
+    <!-- 전체 형(이전)/ 동생(다음) 요소 선택자  -->
+
+    <!-- 범위제한 전체 형(이전)/ 동생(다음) 요소 선택자 -->
+    <!-- <div id="wrap">
+        <h1 class="title">선택자1</h1>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p class="txt3">내용3</p>
+        <p>내용4</p>
+        <p>내용5</p>
+        <p class="txt6">내용6</p>
+    </div> -->
+
+    <!-- 상위요소 선택자  -->
+    <h1 class="title">선택자</h1>
+    <section>
+        <div>
+            <p class="txt1">내용</p>
+        </div>
+    </section>
+    <div>div</div>
+    <div>
+        div
+        <section>
+            <div>
+                <p class="txt2">내용</p>
+            </div>
+        </section> 
+    </div>
+</body>
+</html>

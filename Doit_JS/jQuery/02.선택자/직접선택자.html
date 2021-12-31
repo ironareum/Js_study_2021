@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery_3.6.0/jquery.min.js"></script>
+    <script src="/jquery_3.6.0/jquery-migrate.min.js"></script>
+    <script>
+        //직접선택자들 
+        $(function(){
+            //전체 선택자 
+            $("*").css("border","1px solid blue");
+
+            //아이디 선택자
+            $("#tit").css("background-color", "#ff0")
+            .css("border", "2px solid #f00"); //체이싱 기법으로 선택한 요소의 css메서드를 연속해서 적용.
+
+            //클래스 선택자
+            $(".tit").css("background-color", "#ff0")
+            .css("border", "2px dashed #f00");
+
+            //요소명 선택자
+            $("h2").css("background-color", "#0ff")
+            .css("border", "2px dashed #f00");
+
+            //그룹 선택자
+            $("h1, .tit").css("background-color", "green")
+
+            //종속 선택자
+            $("h1.tit").css("background-color", "orange")
+        })
+    </script>
+</head>
+<body>
+    <h1>제이쿼리</h1>
+    <h1 class="tit">제이쿼리</h1>
+    <h2 id="tit" >선택자</h2>
+    <h3 class="tit">직접 선택자</h3>
+    <h3 >인접 선택자</h3>
+</body>
+</html>

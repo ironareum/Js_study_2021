@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery_3.6.0/jquery.min.js"></script>
+    <script src="/jquery_3.6.0/jquery-migrate.min.js"></script>
+</head>
+<body>
+    <script>
+        /* 
+        탐색선택자
+        $("li:first"), $("li").first //전체 li 요소중 첫번째 요소만 선택
+        $("li:last"), $("li").last //전체 li 요소중 마지막 요소만 선택
+        $("li:odd") //li 요소 무리 중 홀수 인덱스 선택
+        $("li:even") //li 요소 무리 중 짝수 인덱스 선택
+        $("li:first-of-type") //li 요소 무리중 첫번째 요소만 선택
+        $("li:last-of-type")
+        $("li:nth-child(3)") //li 요소 무리중 3번째 요소만 선택
+        $("li:nth-child(3n)") //li 요소 무리중 3의배수 번쨰에 있는 요소만 선택
+        $("li:nth-last-of-type(2)") //li 요소 무리중 마지막 위치로부터 두번쨰에 있는 요소만 선택
+        $("li:only-child") //부모 요소 내에 li요소가 1개 뿐인 li 요소만 선택 
+        $("li:eq(2)"), $("li").eq(2) // li 요소중 인덱스 2가 참조하는 요소를 불러옴
+        $("li:gt(1)") //li 요소중 인덱스 1보다 큰 인덱스가 참조하는 요소를 불러옴
+        $("li:lt(1)") //li 요소중 인덱스 1보다 작은 인덱스가 참조하는 요소를 불러옴
+        $("li").slice(2) //li 요소중 인덱스 2부터 참조하는 요소를 불러옴 
+
+
+        */
+
+        
+        $(function(){
+            // first/last 선택자
+            $("#menu li:first").css({"border": "2px solid blue"})
+            $("#menu li:last").css({"background-color": "red"}, {"border": "5px solid blue"})
+            $("#menu li:odd").css("background-color", "yellow")
+            $("#menu li:even").css("background-color", "green")
+            $("#menu li").eq(2).css("background-color", "aqua")
+            $("#menu li:lt(2)").css("background-color", "red")
+            
+            //first-of-type / last-of-type 선택자
+            $("li:first-of-type").css("background-color", "red")
+            $("li:nth-child(2)").css("background-color", "blue")
+            $("li:nth-child(3n)").css("background-color", "green")
+            $("li:nth-last-child(2)").css("background-color", "aqua")
+
+        })
+        
+
+    </script>
+    <!-- first/last 선택자 -->
+    <!-- <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul> -->
+
+    <!-- first-of-type / last-of-type 선택자 -->
+    <h1>탐색 선택자</h1>
+    <ul>
+        <li>내용1-1</li>
+        <li>내용2-2</li>
+        <li>내용3-3</li>
+        <li>내용4-4</li>
+        <li>내용5-5</li>
+        <li>내용6-6</li>
+        <li>내용7-7</li>
+        <li>내용8-8</li>
+    </ul>
+    <ul>
+        <li>내용2-1</li>
+        <li>내용2-2</li>
+        <li>내용2-3</li>
+        <li>내용2-4</li>
+        <li>내용2-5</li>
+        <li>내용2-6</li>
+        <li>내용2-7</li>
+        <li>내용2-8</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery_3.6.0/jquery.min.js"></script>
+    <script src="/jquery_3.6.0/jquery-migrate.min.js"></script>
+    <script>
+        /* 
+            $("요소선택:contains('텍스트')") //$("li:contains('내용2')") <-요소중 내용2라는 텍스트를 포함하는 요소만 선택
+            $("요소선택").contents() //$("p").contents() <- 선택한 요소의 하위요소중 가장 가까운 하위요소를 선택 
+            $("요소선택:has('요소명") //$("li:has('span')") 
+            $("요소선택").has('요소명') // $('li').has('span')
+            $("요소선택:not(:제외요소)") //$("li:not(:first)") <- li요소중 첫번째 요소만 제외하고 선택
+            $("요소선택").not(:제외요소)
+            $("요소선택").filter('필터요소') //$("li").filter('.list2') <-li **선택요소** 중 클라스값이 list2인 요소만 선택
+            $("요소선택").find("요소선택") //$("li").find("strong") <-li **하위요소** 중 strong만 선택
+            $("요소선택").closest("요소선택") //$("strong").closest("div") <-strong을 감싸는 상위 div 요소중 가장 가까운 요소선택
+            $("요소선택").탐색선택자().end() //$("li").children("a").end() <-필터링이 실행되기 이전의 요소인 li가 선택...? 
+
+        */
+
+        $(function(){
+            // $("p:contains('내용1')").css("color", "red")
+            // $("p").has("strong").css("color", "blue")
+            // $("#outer_wrap").contents().css("border","2px dashed blue") //outer_wrap의 하위요소 중 1깊이의 텍스트와 태그노드를 선택 
+            // $("#inner_2 p").not(':first').css("background-color", "yellow")
+            // $("#inner_2 p").eq(2).end().css("background-color", "red")
+
+            $("#inner_1").find(".txt1").css("background-color", "yellow")
+            $("#inner_1 p").filter(".txt2").css("background-color", "blue")
+            $("#inner_2 p").filter(function(idx,obj){
+                console.log(idx);
+                return idx%2==0;
+            }).css("background-color", "red")
+
+        });
+    </script>
+</head>
+<body>
+    <!-- <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h1>contains(),contents(),has()</h1>
+            <p>
+                <span>내용1</span>
+            </p>
+            <p>
+                <strong>내용2</strong>
+            </p>
+            <p>
+                <span>내용3</span>
+            </p>
+        </section>
+        <section id="inner_2">
+            <h1>not(),end()</h1>
+            <p>내용4</p>
+            <p>내용5</p>
+            <p>내용6</p>
+        </section>
+    </div> -->
+
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h2>find(),filter()</h2>
+            <p class="txt1">내용1</p>
+            <p class="txt2">내용2</p>
+        </section>
+        <section id="inner_2">
+            <h2>filter(function)</h2>
+            <p>index 0</p>
+            <p>index 1</p>
+            <p>index 2</p>
+            <p>index 3</p>
+        </section>
+    </div>
+</body>
+</html>

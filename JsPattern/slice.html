@@ -1,0 +1,14 @@
+function removeItems(items, removable){ 
+    const index = items.indexOf(removable); 
+    return items.slice(0,index).concat(items.slice(index+1));
+}
+
+const cart = ['Naming and Neccessity', 'Alice in Wonderland', 'hoyaa'];
+
+removeItems(cart, 'Alice in Wonderland');
+
+
+function removeItems(items, removable){ 
+    const index = items.indexOf(removable); 
+    return items.slice(0,index).concat(items.slice(index+1));
+}

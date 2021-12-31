@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="theBody">
+    <script>
+        var cols = ['white', 'red', 'yellow', 'blue','aqua'];
+        var i = 0;
+        function changeCol(){
+            i++;
+            if (i >=cols.length) {
+                i =0;
+            }
+            var bodyTag = document.getElementById("theBody");
+            bodyTag.style.backgroundColor=cols[i];
+        }
+    </script>
+    <button onclick="changeCol();">배경색 바꾸기</button>
+</body>
+</html>

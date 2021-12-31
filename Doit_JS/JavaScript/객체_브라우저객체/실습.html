@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var info = navigator.userAgent.toLowerCase(); //운영체제 정보 -> 소문자 
+        var osImg = null;
+
+        // if(info.indexOf('windows')>=0){
+        //     osImg = 'windows.png';
+        // }else if (info.indexOf('Macintosh')>=0){
+        //     osImg = 'macintosh.png';
+        // }else if (info.indexOf('iphone')>=0){
+        //     osImg = 'iphone.png';
+        // } else if(info.indexOf('android')>=0){
+        //     osImg ="android.png";
+        // }
+        // document.write("<img src=\"images/"+osImg+"\"> <br>")
+        var scr = screen;
+        var sc_w = scr.width;
+        var sc_h = scr.height;
+
+        document.write("모니터 해상도 너비:" +sc_w+"px <br>")
+        document.write("모니터 해상도 높이:" +sc_h+"px <br>")
+
+        //실습2 ==================================
+        var phoneNum = "010-2345-6789";
+        // document.write(phoneNum);
+        var result = phoneNum.substring(0,phoneNum.length-4);
+        document.write(result+"**** <br>");
+
+        var imgSrc = "imgae/bnt_out.jpg";
+        var result2 = imgSrc.replace("out", "over");
+        document.write(result2, "<br>")
+
+        //실습3 ==================================
+        var menu = ['짜장면', '돈가스', '된장국', '김치찌개', '회덮밥'];
+        var menuNum = Math.floor(Math.random()*menu.length); //0~4.xx -> int
+        var result = menu[menuNum];
+        document.write(result);
+
+
+    </script>
+</body>
+</html>

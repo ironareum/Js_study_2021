@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery_3.6.0/jquery.min.js"></script>
+    <script src="/jquery_3.6.0/jquery-migrate.min.js"></script>
+    <script>
+        $(function(){
+            console.log($("#p1").width());
+            console.log($("#p1").innerWidth());
+            console.log($("#p1").outerWidth());
+            $("#p2").outerWidth(100);
+            $("#p2").outerHeight(200);
+
+        })
+    </script>
+    <style>
+        *{
+            padding:0;
+        }
+        #p1, #p2{
+            width:100px;
+            height:50px;
+            padding:20px;
+            border:5px solid #000;
+            background-color: #ff0;
+        }
+    </style>
+</head>
+<body>
+    <h1>수지 조작 메서드</h1>
+    <p id="p1">내용1</p>
+    <p id="p2">내용2</p>
+</body>
+</html>

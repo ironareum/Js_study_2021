@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        var userEmail = prompt("이메일을 입력하세요", "");
+        var arrUrl =['.co.kr', '.com', '.net', '.or.kr', 'go.kr', 'net'];
+
+        var check1 = false;
+        var check2 = false;
+
+        if(userEmail.indexOf('@') > 0) {
+            check1 =true;
+            console.log("check1 통과! ")
+            console.log(check1)
+        } //@이 들어있으면 True
+
+        for (var i=0; i <arrUrl.length; i++){
+            if(userEmail.indexOf(arrUrl[i]) > 0){ //arrUrl형식중 하나가 포함되어 있으면
+                check2 = true;
+                console.log("check2 통과! ")
+                console.log(check2)
+            }
+        }
+        
+        if(check1 && check2) {
+            console.log("check1:",check1, "check2:",check2)
+            document.write(userEmail);
+        } else {
+            console.log("Err - check1:",check1, "check2:",check2)
+            alert("이메일 형식이 잘못되었습니다.");
+        }
+    </script>
+</body>
+</html>

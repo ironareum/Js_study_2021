@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        function 함수명(매개변수1, 매개변수2, ... n) {
+            this.속성명 = 새 값;
+        } 
+        함수명.prototype.함수명 = function(){
+            자바스크립트 코드;
+        }
+        var 참조 변수(인스턴스 네임) = new 함수명();
+        
+        */
+        function CheckWeight(name, height, weight){
+            this.name = name;
+            this.height = height;
+            this.weight = Number(weight);
+            this.minWeight;
+            this.maxWeight;
+            console.log(this.weight)
+            console.log(typeof(this.weight))
+        }
+        //prototype
+        CheckWeight.prototype.getInfo = function(){
+            var str="";
+            str += "이름: " + this.name +", ";
+            str += "키: " + this.height +", ";
+            str += "몸무게: " + this.weight +"kg <br>";
+            return str;
+        }
+        CheckWeight.prototype.getResult = function(){
+            this.minWeight = (this.height-100)*0.9 -5;
+            this.maxWeight = (this.height-100)*0.9 +5;
+            console.log("min:",this.minWeight)
+            console.log("max:",this.maxWeight)
+
+            if (this.weight >=this.minWeight 
+                && this.weight <= this.weight){
+                return "정상 몸무게 입니다.";
+            }else if (this.weight < this.minWeight){
+                return "정상 몸무게보다 미달 입니다.";
+            }else {
+                return "정상 몸무게보다 초과 입니다.";
+            }
+        }
+
+        var jang = new CheckWeight("장보리", "153", "104");
+        console.log(jang)
+        document.write(jang.getInfo(), "<br>");
+        document.write(jang.getResult(), "<br>");
+        document.write("==============<br>");
+        var kang = new CheckWeight("아름", "168", "43");
+        document.write(kang.getInfo(), "<br>");
+        document.write(kang.getResult(), "<br>");
+        document.write(jang.getResult()===kang.getResult());
+    </script>
+</body>
+</html>

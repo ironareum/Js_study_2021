@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //prompt("질문", "기본응답")
+        height = prompt("키가 몇인가요? ",0);
+        weight = prompt("몸무게는 몇인가요?")
+
+        n_weight = (height-100)*0.9; //오차범위 +- 5 
+        document.write('적정 몸무게는: ', n_weight, 'kg 입니다.<br>');
+        var result = weight >= n_weight-5 && weight <= n_weight+5;
+        result = result ? "적정 체중입니다." : "적정 체중이 아닙니다."
+        document.write(result)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        객체 생성 함수 기본형 :
+        function 함수명(매개변수1, 매개변수2, 매개변수3){ //객체생성자 함수
+            this.속성명 = 새 값;
+            this.함수명 = function(){
+                자바스크립트 코드;
+            }
+        }
+        var 인스턴스 변수 = new 함수명(); //객체생성
+        var 인스턴스변수 = {속성:새값, 함수명:function(){...}}
+        */
+
+        function CheckWeight(name, height, weight){ //객체 생성자 함수 변수명은 대문자!
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+            //함수
+            this.getInfo = function(){
+                var str="";
+                str += "이름: "+this.userName+", ";
+                str += "키: "+this.userHeight+", ";
+                str += "몸무게: "+this.userWeight+"<br>";
+                return str;
+            }
+            this.getResult = function(){
+                this.minWeight = (this.userHeight-100)*0.9 -5;
+                this.maxWeight = (this.userHeight-100)*0.9 +5;
+                // if(this.userWeight >= this.minWeight 
+                // && this.)
+                //추후 작성 
+            }
+        }
+    </script>
+</body>
+</html>

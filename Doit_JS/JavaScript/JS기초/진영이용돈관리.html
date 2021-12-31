@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        /* 
+        //진영이 하루 지출 비용
+        교통비 3000원
+        식비 6000원
+        음료비 3000원
+        */
+        cost1 = Number(prompt('교통비를 입력하세요: ', 0));
+        cost2 = Number(prompt('식비를 입력하세요: ', 0));
+        cost3 = Number(prompt('음료비를 입력하세요: ', 0));
+
+        var costPerDay = cost1+cost2+cost3;
+        var n_costPerDay = 10000;
+        var result = costPerDay <= n_costPerDay;
+        result = result? "돈 관리를 잘했어요!" : costPerDay-n_costPerDay +"원 초과"
+        document.write(result)
+    </script>
+</body>
+</html>

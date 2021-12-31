@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery_3.6.0/jquery.min.js"></script>
+    <script src="/jquery_3.6.0/jquery-migrate.min.js"></script>
+    <script>
+        /* 
+            is(":요소상태") //$(".txt1")is(":visible") //true/false로 반환
+            $.noConflic() //var 변수 = $.noConflick(); 변수("요소선택") //현재 제이쿼리에서 사용중인 $메서드 사용을 중단하고 새로 지정한 변수명 메서드를 사용한다...?
+            get() // $("요소").get(0).style.color="red" //선택자에 get(0)을 적용하면 자바스크립트 DOM방식의 스타일을 사용할수 있음 
+            **제이쿼리로 선택한 요소는 자바스크립트 DOM방식의 스타일을 사용할수 없음.
+        */
+        $(function(){
+            //is(":[checked | selected | visible | hidden | animated]")
+            var result_1 = $("#inner_1 p").eq(0).is(":visible");
+            console.log(result_1)
+            
+            var result_2 = $("#inner_1 p").eq(1).is(":visible");
+            console.log(result_2)
+            
+            var result_3 = $("#chk1").is(":checked")
+            console.log(result_3)
+
+            var result_4 = $("#chk2").is(":checked")
+            console.log(result_4)
+
+        })
+    </script>
+</head>
+<body>
+    <div id="outer_wrap">
+        <h1>is()</h1>
+        <sectioin id="inner_1">
+            <h2>문단 태그 영역</h2>
+            <p>내용1</p>
+            <p style="display:none;">내용2</p>
+        </sectioin>
+
+        <sectioin id="inner_2">
+            <h2>폼 태그 영역</h2>
+            <p>
+                <input type="checkbox" name="chk1" checked id="chk1">
+                <label for="chk1">체크1</label>
+                <input type="checkbox" name="chk2" id="chk2">
+                <label for="chk2">체크2</label></p>
+        </sectioin>
+    </div>
+</body>
+</html>

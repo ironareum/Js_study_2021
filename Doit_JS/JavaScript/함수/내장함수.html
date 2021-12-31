@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        내장함수의 종류 
+        encodeURI(): 문자를 유니코드 값으로 인코딩 (영문,숫자,일부기호(;,/?:@&=+$)는 제외)
+        encodeURIComponent(): 문자를 유니 코드값으로 인코딩함 (영문,숫자 제외)
+        decodeURI():유니코드값을 디코딩해 다시 문자화함
+        decodeURIComponent(): 
+        parseInt(), parseFloat() : 문자열 데이터를 정수형/실수형으로 반환
+        String(), Number(): 문자형/정수형 데이터로 반환
+        Boolean()
+        isNaN(): is Not a Number의 약자. 숫자가 아닌 데이터가 포함되어 있으면 true. "123"-> false
+        eval(): 문자형 데이터를 따옴표가 없는 자바스크립트 코드로 처리 
+        */
+        a=encodeURI("?query=값")
+        document.write(encodeURI("?query=areum"),"<br>") //?query=areum
+        document.write(a,"<br>") //?query=%EA%B0%92
+        console.log(a,"<br>")
+
+        document.write("========<br>")
+        b=encodeURIComponent("?query=값")
+        document.write(encodeURIComponent("?query=areum"),"<br>") //%3Fquery%3Dareum
+        document.write(b,"<br>") //%3Fquery%3D%EA%B0%92
+        console.log(b,"<br>")
+
+        document.write("========<br>")
+        c= decodeURI("?query=%EA%B0%92")
+        document.write(decodeURI("?query=%EA%B0%92"),"<br>") //?query=값
+        document.write(c,"<br>") //?query=값
+        console.log(c,"<br>")
+
+
+        document.write(eval("50+20"), "<br>")
+        document.write("50+30")
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //confirm 메소드 
+        var result = confirm("정말로 회원탈퇴를 진행하시겠습니까?");
+        if(result){
+            document.write('탈퇴 처리 되었습니다.');
+        } else {
+            document.write('탈퇴 취소되었습니다.');
+            location.reload(); //alert랑 짝꿍. (로그인에서 쓰는건데 한번 써봄 )
+        }
+    </script>
+</body>
+</html>
+

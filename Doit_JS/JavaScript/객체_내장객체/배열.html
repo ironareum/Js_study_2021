@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열 생성 방법 3가지
+        //방법1 
+        var arr1 = new Array();
+        arr1[0] = '1', arr1[1]='2', arr1[2]='3';
+
+        //방법2
+        var arr2 = new Array('사과', '바나나', '딸기');
+
+        //방법3
+        var arr3 = ['a', 'b', 'c'];
+
+        document.write("arr1: ",arr1,"<br>");
+        document.write("arr2: ",arr2,"<br>");
+        document.write("arr3: ",arr3,"<br>");
+
+        
+        document.write(arr2.join('-'),"<br>"); //조인
+        document.write(arr2.concat(arr3),"<br>"); //조인
+
+        document.write("====================<br>")
+        var greenArr =['교대', '방배','강남'];
+        var yellowArr = ['미금', '정자','수서'];
+        document.write("greenArr: ", greenArr,"<br>");
+        document.write("yellowArr: ", yellowArr,"<br>");
+        document.write("====================<br>")
+
+        var data1 = yellowArr.pop()
+        document.write("data1:", data1,"<br>")
+        var data2 = yellowArr.shift()
+        document.write("data2:", data2,"<br>")
+        
+        yellowArr.push(data2)
+        yellowArr.unshift(data1)
+
+        document.write("=========== 수정후 =========<br>")
+        document.write("greenArr: ", greenArr,"<br>");
+        document.write("yellowArr: ", yellowArr,"<br>");
+        document.write("====================<br>")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery_3.6.0/jquery.min.js"></script>
+    <script src="/jquery_3.6.0/jquery-migrate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("button[name='add']").on("click", $(this), function () {
+            //     $("body").append("<button name='add'>+</button>");
+            // });
+            $(this).on("click", "button[name='add']", function () {
+                $("body").append("<button name='add'>+</button>");
+            });
+            // $(document).on("click", "button[name='add']", function () {
+            //     $("body").append("<button name='add'>+</button>");
+            // });
+        });
+    </script>
+</head>
+<body>
+    <button name='add'>+</button>
+</body>
+</html>
